@@ -1,4 +1,3 @@
-#%%
 import random
 
 mobsHP = {
@@ -354,4 +353,3 @@ status = {
 }
 
 inv = {}
-# %%
