@@ -9,7 +9,7 @@ mobsHP = {
     'Morcego' : 3,
     'Urso' : 35,
     'Urso Polar' : 35,
-    'Dragão' : 200,
+    'Dragão' : 150,
     'Rato' : 3,
     'Ogre' : 40,
     'Goblin' : 15,
@@ -51,9 +51,10 @@ mobsHP = {
     'Foca' : 15,
     'Peixe' : 3,
     # bosses
-    'Finn' : 500,
-    'Jake' : 1000,
-    'Leviathan' : 6000
+    'Finn' : 200,
+    'Jake' : 250,
+    'Rei do Gelo': 280,
+    'Leviathan' : 350
 }
 
 mobsATK = {
@@ -71,7 +72,7 @@ mobsATK = {
     'Goblin' : 3,
     'Aranha' : 2,
     'Aranha Gigante' : 6,
-    'Minotauro' : 40,
+    'Minotauro' : 30,
     'Cobra' : 2,
     'Vampiro' : 15,
     'Demónio' : 25,
@@ -96,6 +97,7 @@ mobsATK = {
     # bosses
     'Finn' : 60,
     'Jake' : 100,
+    'Rei do Gelo': 115,
     'Leviathan' : 150
 }
 
@@ -143,7 +145,6 @@ biomasMobs = [
         'Gorila'
     ),
     ( # oceano
-        'Leviathan',
         'Orca',
         'Baleia',
         'Peixe'
@@ -201,7 +202,6 @@ biomasMobs = [
         'Orca',
         'Foca',
         'Pinguim',
-        'Leviathan',
         'Lobo'
     ),
     ( # floresta assombrada
@@ -298,7 +298,6 @@ biomasMobs = [
         'Goblin',
     )
 ]
-# usar o index para navegar pelos indices
 
 armas = {
     'Espada de Madeira' : 2,
@@ -306,47 +305,55 @@ armas = {
     'Espada de Ferro' : 7,
     'Espada de Diamante' : 9,
     'Escudo' : 1,
-    'Arco e Flecha' : 5,
+    'Arco' : 5,
     'Machado de Madeira' : 4,
     'Machado de Pedra' : 10,
     'Machado de Ferro' : 14,
     'Machado de Diamante' : 18,
-    'LIFE TAKER' : 10000
-    # magia talvez no futuro
+    'Espada do Finn' : 50,
+    'Cajado do Rei do Gelo' : 75,
+    'LIFE TAKER' : 1000
+    # magia talvez
 }
 
 armaduras = {
     'Armadura de Ferro' : 10,
     'Armadura de Aço' : 20,
     'Armadura de Diamante' : 30,
-    'ARMADURA INQUEBRÁVEL' : 10000
+    'Armadura do Jake' : 75,
+    'ARMADURA INQUEBRÁVEL' : 1000
 }
 
 items = [
     'Madeira', # golem, goblin
     'Pedra', # golem, goblin
-    'Ferro', # bandido, goblin
-    'Diamante', # bandido, goblin
-    'Aço', # bandido, goblin
+    'Ferro', # bandido, goblin, golem
+    'Diamante', # bandido, goblin, golem
+    'Aço', # bandido, goblin, golem
     'Fio', # aranha, goblin
-    'Bife cru', # vaca
-    'Costeleta crua', # porco
-    'Frango cru', # galinha, passaro
-    'Carneiro cru', # ovelha
-    'Cervo cru', # veado
-    'Cogumelo' # ITEM ALEATORIO bruxa, gnomo
+    'Bife Cru', # vaca
+    'Costeleta Crua', # porco
+    'Frango Cru', # galinha, passaro
+    'Carneiro Cru', # ovelha
+    'Cervo Cru', # veado
+    'Cogumelo' # bruxa, gnomo, ganhar item aleatorio, craftar poçao
     'Poção de Vida', # bruxa, goblin, gnomo
     'Poção de Vida Máxima', # bruxa, goblin, gnomo
     'Poção de Força', # bruxa, goblin, gnomo
     'Poção de Resistência', # bruxa, goblin, gnomo
-    'Arco' # esqueleto
-    'Flecha' # esqueleto
+    'Arco', # esqueleto
+    'Flecha', # esqueleto
+    'Bife Assado', # cozinhar
+    'Costeleta Assada', # cozinhar
+    'Frango Assado', # cozinhar
+    'Carneiro Assado', # cozinhar
+    'Cervo Assado' # cozinhar
 ]
 
 status = {
     'HP' : 40,
     'ATK' : 3,
-    'DEF' : 0.3, # (em %)
+    'DEF' : 2, 
     'BIOMA' : random.choice(biomas),
     'GOLD' : 10,
     'ARMA': 'Desarmado'
