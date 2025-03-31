@@ -1,3 +1,4 @@
+
 import conteudo
 import random
 
@@ -194,8 +195,174 @@ def construir():
         '8. Machado de Pedra [3 Pedras ; 1 Madeira]\n'
         '9. Machado de Ferro [3 Ferros ; 1 Madeira]\n'
         '10. Machado de Diamante [3 Diamantes ; 1 Madeira]\n'
-    ))
-    # usar mesmo esquema do cozinhar(), meter poçoes e armadura tambem
+        '11. Poção de Vida [1 Cogumelo ; 1 Frasco]\n'
+        '12. Poção de Vida Máxima [2 Cogumelos ; 1 Frasco]\n'
+        '13. Poção de Força [1 Cogumelo ; 1 Ferro ; 1 Frasco]\n'
+        '14. Poção de Resistência [1 Cogumelo ; 1 Diamante ; 1 Frasco]\n[nome] .: '
+    )) # meter armadura tambem
+    if escolha in conteudo.itemsCraftaveis:
+        try:
+            match escolha:
+                case 'Espada de Madeira':
+                    if conteudo.inv['Madeira'] >= 3:
+                        conteudo.inv['Madeira'] -= 3
+                        conteudo.inv['Espada de Madeira'] += 1
+                        print(f'{escolha} foi adicionado ao teu inventário.')
+                    else:
+                        print('Não tens materiais suficientes.')
+                case 'Espada de Pedra':
+                    if conteudo.inv['Pedra'] >= 2:
+                        if conteudo.inv['Madeira'] >= 1:
+                            conteudo.inv['Pedra'] -= 2
+                            conteudo.inv['Madeira'] -= 1
+                            conteudo.inv['Espada de Pedra'] += 1
+                            print(f'{escolha} foi adicionado ao teu inventário.')
+                        else:
+                            print('Não tens materiais suficientes.')
+                    else:
+                        print('Não tens materiais suficientes.')
+                case 'Espada de Ferro':
+                    if conteudo.inv['Ferro'] >= 2:
+                        if conteudo.inv['Madeira'] >= 1:
+                            conteudo.inv['Ferro'] -= 2
+                            conteudo.inv['Madeira'] -= 1
+                            conteudo.inv['Espada de Ferro'] += 1
+                            print(f'{escolha} foi adicionado ao teu inventário.')
+                        else:
+                            print('Não tens materiais suficientes.')
+                    else:
+                        print('Não tens materiais suficientes.')
+                case 'Espada de Diamante':
+                    if conteudo.inv['Diamante'] >= 2:
+                        if conteudo.inv['Madeira'] >= 1:
+                            conteudo.inv['Diamante'] -= 2
+                            conteudo.inv['Madeira'] -= 1
+                            conteudo.inv['Espada de Diamante'] += 1
+                            print(f'{escolha} foi adicionado ao teu inventário.')
+                        else:
+                            print('Não tens materiais suficientes.')
+                    else:
+                        print('Não tens materiais suficientes.')
+                case 'Arco':
+                    if conteudo.inv['Fio'] >= 2:
+                        if conteudo.inv['Madeira'] >= 3:
+                            conteudo.inv['Fio'] -= 2
+                            conteudo.inv['Madeira'] -= 3
+                            conteudo.inv['Arco'] += 1
+                            print(f'{escolha} foi adicionado ao teu inventário.')
+                        else:
+                            print('Não tens materiais suficientes.')
+                    else:
+                        print('Não tens materiais suficientes.')
+                case 'Flecha':
+                    if conteudo.inv['Pedra'] >= 1:
+                        if conteudo.inv['Madeira'] >= 1:
+                            conteudo.inv['Pedra'] -= 1
+                            conteudo.inv['Madeira'] -= 1
+                            conteudo.inv['Flecha'] += 1
+                            print(f'{escolha} foi adicionado ao teu inventário.')
+                        else:
+                            print('Não tens materiais suficientes.')
+                    else:
+                        print('Não tens materiais suficientes.')
+                case 'Machado de Madeira':
+                    if conteudo.inv['Madeira'] >= 4:
+                        conteudo.inv['Madeira'] -= 4
+                        conteudo.inv['Machado de Madeira'] += 1
+                        print(f'{escolha} foi adicionado ao teu inventário.')
+                    else:
+                        print('Não tens materiais suficientes.')
+                case 'Machado de Pedra':
+                    if conteudo.inv['Pedra'] >= 3:
+                        if conteudo.inv['Madeira'] >= 1:
+                            conteudo.inv['Pedra'] -= 3
+                            conteudo.inv['Madeira'] -= 1
+                            conteudo.inv['Machado de Pedra'] += 1
+                            print(f'{escolha} foi adicionado ao teu inventário.')
+                        else:
+                            print('Não tens materiais suficientes.')
+                    else:
+                        print('Não tens materiais suficientes.')
+                case 'Machado de Ferro':
+                    if conteudo.inv['Ferro'] >= 3:
+                        if conteudo.inv['Madeira'] >= 1:
+                            conteudo.inv['Ferro'] -= 3
+                            conteudo.inv['Madeira'] -= 1
+                            conteudo.inv['Machado de Ferro'] += 1
+                            print(f'{escolha} foi adicionado ao teu inventário.')
+                        else:
+                            print('Não tens materiais suficientes.')
+                    else:
+                        print('Não tens materiais suficientes.')
+                case 'Machado de Diamante':
+                    if conteudo.inv['Diamante'] >= 3:
+                        if conteudo.inv['Madeira'] >= 1:
+                            conteudo.inv['Diamante'] -= 3
+                            conteudo.inv['Madeira'] -= 1
+                            conteudo.inv['Machado de Diamante'] += 1
+                            print(f'{escolha} foi adicionado ao teu inventário.')
+                        else:
+                            print('Não tens materiais suficientes.')
+                    else:
+                        print('Não tens materiais suficientes.')
+                case 'Poção de Vida':
+                    if conteudo.inv['Cogumelo'] >= 1:
+                        if conteudo.inv['Frasco'] >= 1:
+                            conteudo.inv['Cogumelo'] -= 1
+                            conteudo.inv['Frasco'] -= 1
+                            conteudo.inv['Poção de Vida'] += 1
+                            print(f'{escolha} foi adicionado ao teu inventário.')
+                        else:
+                            print('Não tens materiais suficientes.')
+                    else:
+                        print('Não tens materiais suficientes.')
+                case 'Poção de Vida Máxima':
+                    if conteudo.inv['Cogumelo'] >= 2:
+                        if conteudo.inv['Frasco'] >= 1:
+                            conteudo.inv['Cogumelo'] -= 2
+                            conteudo.inv['Frasco'] -= 1
+                            conteudo.inv['Poção de Vida Máxima'] += 1
+                            print(f'{escolha} foi adicionado ao teu inventário.')
+                        else:
+                            print('Não tens materiais suficientes.')
+                    else:
+                        print('Não tens materiais suficientes.')
+                case 'Poção de Força':
+                    if conteudo.inv['Cogumelo'] >= 1:
+                        if conteudo.inv['Ferro'] >= 1:
+                            if conteudo.inv['Frasco'] >= 1:
+                                conteudo.inv['Cogumelo'] -= 1
+                                conteudo.inv['Ferro'] -= 1
+                                conteudo.inv['Frasco'] -= 1
+                                conteudo.inv['Poção de Força'] += 1
+                                print(f'{escolha} foi adicionado ao teu inventário.')
+                            else:
+                                print('Não tens materiais suficientes.')
+                        else:
+                            print('Não tens materiais suficientes.')
+                    else:
+                        print('Não tens materiais suficientes.')
+                case 'Poção de Resistência':
+                    if conteudo.inv['Cogumelo'] >= 1:
+                        if conteudo.inv['Diamante'] >= 1:
+                            if conteudo.inv['Frasco'] >= 1:
+                                conteudo.inv['Cogumelo'] -= 1
+                                conteudo.inv['Diamante'] -= 1
+                                conteudo.inv['Frasco'] -= 1
+                                conteudo.inv['Poção de Resistência'] += 1
+                                print(f'{escolha} foi adicionado ao teu inventário.')
+                            else:
+                                print('Não tens materiais suficientes.')
+                        else:
+                            print('Não tens materiais suficientes.')
+                    else:
+                        print('Não tens materiais suficientes.')
+        except KeyError:
+            print('Não tens materiais suficientes.')
+    else:
+        print('Item não pode ser construido.')
+    print()
+    menu()
 
 def cozinhar():
     print()
@@ -205,7 +372,7 @@ def cozinhar():
         '2. Costeleta Crua\n'
         '3. Frango Cru\n'
         '4. Carneiro Cru\n'
-        '5. Cervo cru\n[nome] .: '
+        '5. Cervo Cru\n[nome] .: '
     ))
     if escolha in conteudo.inv:
         if 'Madeira' in conteudo.inv:
@@ -214,14 +381,19 @@ def cozinhar():
             match escolha:
                 case 'Bife Cru':
                     conteudo.inv['Bife Assado'] += 1
+                    print('Bife Assado foi adicionado ao teu inventário.')
                 case 'Costeleta Crua':
                     conteudo.inv['Costeleta Assada'] += 1
+                    print('Costeleta Assada foi adicionada ao teu inventário.')
                 case 'Frango Cru':
                     conteudo.inv['Frango Assado'] += 1
+                    print('Frango Assado foi adicionado ao teu inventário.')
                 case 'Carneiro Cru':
                     conteudo.inv['Carneiro Assado'] += 1
+                    print('Carneiro Assado foi adicionado ao teu inventário.')
                 case 'Cervo Cru':
                     conteudo.inv['Cervo Assado'] += 1
+                    print('Cervo Assado foi adicionado ao teu inventário.')
         else:
             print('Não tens madeira para cozinhar a carne.')
     else:
@@ -323,7 +495,7 @@ def combate():
     if mobHP <= 0:
         quant = random.randint(2, 6)
         item = drops(mob)
-        if item != None:
+        if item is not None:
             escolha = str(input(f'Encontraste {quant} de {item}, desejas guardar no teu inventário? [1/2]\n.: ')).lower()
             if escolha == '1':
                 if item in conteudo.inv:
@@ -369,7 +541,7 @@ def drops(mob):
             drop = 'Cervo Cru'
             return drop
         case 'Bruxa':
-            drop = random.choice(['Cogumelo', 'Poção de Vida', 'Poção de Vida Máxima', 'Poção de Força', 'Poção de Resistência'])
+            drop = random.choice(['Cogumelo', 'Poção de Vida', 'Poção de Vida Máxima', 'Poção de Força', 'Poção de Resistência', 'Frasco'])
             return drop
         case 'Gnomo':
             drop = random.choice(['Cogumelo', 'Poção de Vida', 'Poção de Vida Máxima', 'Poção de Força', 'Poção de Resistência'])
