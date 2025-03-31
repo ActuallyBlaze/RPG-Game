@@ -1,3 +1,4 @@
+
 import random
 
 mobsHP = {
@@ -336,24 +337,42 @@ items = [
     'Frango Cru', # galinha, passaro
     'Carneiro Cru', # ovelha
     'Cervo Cru', # veado
-    'Cogumelo' # bruxa, gnomo, ganhar item aleatorio, craftar poçao
-    'Poção de Vida', # bruxa, goblin, gnomo
-    'Poção de Vida Máxima', # bruxa, goblin, gnomo
-    'Poção de Força', # bruxa, goblin, gnomo
-    'Poção de Resistência', # bruxa, goblin, gnomo
+    'Cogumelo' # bruxa, gnomo, ganhar item aleatorio, construir
+    'Poção de Vida', # bruxa, goblin, gnomo, construir
+    'Poção de Vida Máxima', # bruxa, goblin, gnomo, construir
+    'Poção de Força', # bruxa, goblin, gnomo, construir
+    'Poção de Resistência', # bruxa, goblin, gnomo, construir
     'Arco', # esqueleto
     'Flecha', # esqueleto
     'Bife Assado', # cozinhar
     'Costeleta Assada', # cozinhar
     'Frango Assado', # cozinhar
     'Carneiro Assado', # cozinhar
-    'Cervo Assado' # cozinhar
+    'Cervo Assado', # cozinhar
+    'Frasco' # bruxa
+]
+
+itemsCraftaveis = [
+    'Espada de Madeira', # 1
+    'Espada de Pedra', # 2
+    'Espada de Ferro', # 3
+    'Espada de Diamante', # 4
+    'Arco', # 5
+    'Flecha', # 6
+    'Machado de Madeira', # 7
+    'Machado de Pedra', # 8
+    'Machado de Ferro', # 9
+    'Machado de Diamante', # 10
+    'Poção de Vida', # 11
+    'Poção de Vida Máxima', # 12
+    'Poção de Força', # 13
+    'Poção de Resistência' # 14
 ]
 
 status = {
     'HP' : 40,
     'ATK' : 3,
-    'DEF' : 2, 
+    'DEF' : 2,
     'BIOMA' : random.choice(biomas),
     'GOLD' : 10,
     'ARMA': 'Desarmado'
