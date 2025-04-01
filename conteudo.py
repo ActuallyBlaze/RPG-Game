@@ -301,12 +301,13 @@ biomasMobs = [
 ]
 
 armas = {
+    'Nenhuma' : 0,
     'Espada de Madeira' : 2,
     'Espada de Pedra' : 5,
     'Espada de Ferro' : 7,
     'Espada de Diamante' : 9,
-    'Escudo' : 1,
-    'Arco' : 5,
+    'Escudo' : 1, # inutilizado
+    'Arco' : 5, # inutilizado mas configurado
     'Machado de Madeira' : 4,
     'Machado de Pedra' : 10,
     'Machado de Ferro' : 14,
@@ -318,6 +319,7 @@ armas = {
 }
 
 armaduras = {
+    'Nenhuma' : 0,
     'Armadura de Ferro' : 10,
     'Armadura de Aço' : 20,
     'Armadura de Diamante' : 30,
@@ -363,10 +365,21 @@ itemsCraftaveis = [
     'Machado de Pedra', # 8
     'Machado de Ferro', # 9
     'Machado de Diamante', # 10
-    'Poção de Vida', # 11
-    'Poção de Vida Máxima', # 12
-    'Poção de Força', # 13
-    'Poção de Resistência' # 14
+    'Armadura de Ferro' # 11
+    'Armadura de Aço' # 12
+    'Armadura de Diamante' # 13
+    'Poção de Vida', # 14
+    'Poção de Vida Máxima', # 15
+    'Poção de Força', # 16
+    'Poção de Resistência' # 17
+]
+
+itemsCozinhaveis = [
+    'Bife Assado', # 1
+    'Costeleta Crua', # 2
+    'Frango Assado', # 3
+    'Carneiro Assado', # 4
+    'Cervo Assado' # 5
 ]
 
 status = {
@@ -375,7 +388,8 @@ status = {
     'DEF' : 2,
     'BIOMA' : random.choice(biomas),
     'GOLD' : 10,
-    'ARMA': 'Desarmado'
+    'ARMA': 'Nenhuma',
+    'ARMADURA' : 'Nenhuma'
 }
 
 inv = {}
